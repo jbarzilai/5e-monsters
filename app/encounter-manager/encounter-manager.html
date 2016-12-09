@@ -20,16 +20,15 @@
 			>Save current encounter</button>
 		</div>
 
-		<div
-			class="encounter-manager-monster"
-			ng-repeat="(id, group) in vm.encounter.groups"
-		>
+		<div class="encounter-manager-monster" ng-repeat="(id, group) in vm.encounter.groups">
 			<span ng-if="group.qty > 1">{{ group.qty }}x</span>
 			{{ group.monster.name }}
 		</div>
 	</div>
 
-	<div ng-repeat="storedEncounter in vm.library.encounters track by $index">
-		<manager-row stored-encounter='storedEncounter'></manager-row>
+	<div class="row" data-columns>
+		<div class="col-sm-4 col-md-3" ng-repeat="storedEncounter in vm.library.encounters track by $index">
+			<manager-row stored-encounter='storedEncounter'></manager-row>
+		</div>
 	</div>
 </div>
