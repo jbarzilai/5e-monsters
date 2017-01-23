@@ -7786,6 +7786,9 @@ button.close {
   border-bottom: 1px solid #000;
   background-color: #FC8D62; }
 
+.encounter-manager .row[data-columns]::before {
+  content: '4 .column.size-1of4'; }
+
 .combatant-setup__player {
   background-color: #66C2A5; }
 
